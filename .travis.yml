@@ -15,7 +15,7 @@ before_deploy:
 - git config --local user.name "Travis CI"
 - git config --local user.email "travis@travis-ci.org"
 - standard-version
-- git push --follow-tags -q https://github.com/MatthewMi11er/testrepo
+- git push --follow-tags -q https://github.com/MatthewMi11er/testrepo HEAD:master
 - echo ${TAGPERM}
 deploy:
   provider: releases
