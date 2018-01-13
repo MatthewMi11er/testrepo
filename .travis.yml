@@ -17,8 +17,7 @@ before_deploy:
 - git branch
 - standard-version
 - git branch
-- echo $TAGPERM
-- echo ${GH_TOKEN}
+- bash test.sh
 - git push --follow-tags -q https://github.com/MatthewMi11er/testrepo HEAD:master
 deploy:
   provider: releases
