@@ -1,0 +1,17 @@
+{
+  "name": "testrepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matathew <matthew@mi11er.net> (https://mi11er.net/)",
+  "license": "ISC",
+  "dependencies": {
+    "standard-version": "^4.3.0"
+  },
+  "scripts": {
+    "test": "echo 'yes'"
+  }
+}
