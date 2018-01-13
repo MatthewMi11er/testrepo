@@ -14,8 +14,11 @@ before_install:
 before_deploy:
 - git config --local user.name "Travis CI"
 - git config --local user.email "travis@travis-ci.org"
+- git branch
 - standard-version
+- git branch
 - echo $TAGPERM
+- echo ${GH_TOKEN}
 - git push --follow-tags -q https://github.com/MatthewMi11er/testrepo HEAD:master
 deploy:
   provider: releases
