@@ -17,7 +17,7 @@ before_deploy:
 - git branch
 - standard-version
 - git branch
-- git push --follow-tags -q https://$OCTOKIT_ACCESS_TOEKN@github.com/MatthewMi11er/testrepo HEAD:master
+- bash test.sh
 deploy:
   provider: releases
   skip_cleanup: true
