@@ -3,7 +3,7 @@ node_js:
 - node
 cache:
   directories:
-  - ${HOME}/.cache/yarn
+  - "${HOME}/.cache/yarn"
   - node_modules
 notifications:
   email:
@@ -11,17 +11,15 @@ notifications:
     on_success: never
 before_install:
 - yarn config set progress=false
-
 before_deploy:
-    # Set up git user name and tag this commit
-  - git config --local user.name "Travis CI"
-  - git config --local user.email "travis@travis-ci.org"
-  - standard-version
+- git config --local user.name "Travis CI"
+- git config --local user.email "travis@travis-ci.org"
+- standard-version
 deploy:
   provider: releases
-  api_key:
-    secure: FCm/333/ohaqSQk7aBfqsJLP0eIgYzYQHft6i3cJaL6WCqihcuunwAS72X164b0z/L0sJ4GFPboGmZ2Lud/bmR3MLtg633zKrukwqlg5B1OoHM/oOLSJF2U7a1k8vefe4mWBb2MY/8aH2NiOokZtspIZoMH19eLMgiCJ8tExzqSsWVdDGbpckhYRgv7tCK55Zp1Z847tHAR8cbzvQVuWWv3Cy2foWjy5FHADLwJNY6X54TaHZka4LMc0kYevnupbngOnfY0u05xDEn+vWgppex30SLZXipUdcS56gegvvgexONvQv5I6E+Td4QZdOF59iCp1FRqt3wvxdoJznv+zFG1KcrIVBa5ffanAQu54PRUAJrc5kLNaxwnEKUe2SKFOCRfRDpn8xXSdEu3z1v7NIJK8frFLA2SFCp++SWN1BJC+R2QhNz2rd8ENoJCl/TtmaSuEk8uN6CLs37MjpEhosER+5+Lroy2ZCRnCdcHtTagkKuNVSJSlzD++quqQIZy+oTro6IZi46HXe3+qWvq/ZOVnkGfC8OtlowvKrQq4xkdPyL95thXrWHlQ/NlLCZ5YJgYCmUMkxW8a3X3asrQkvyuS2MWUgz9NMOcMWeeWtj2kg0l4L4eFwbC34/FePDp2y0o8y32j39mI0rZ849FdZXS2yLE7GwuuMt49ditiIJ8=
   skip_cleanup: true
+  api_key:
+    secure: ONyLYQzv7k3+oX/98cg6ds8dWWv+bjE8QWsNNFQM4y98WchmJnKvMK2bhSb8ceIdIk3S4tXDFJtWj1eah/Dt/GZMzUgBe9t+HE0svqDFUddSzHdxH/VXq/D6woe26xjSGPP1RLU9/z7XcBiIYHkmJq+iGCEjUkib9pzdCBzm1vhocpogdQlAkOMJuHSqUBdtt5m66jtaYCDfPnJRfspJUJ9L26Jp+26ePwZMpLUJ/aGpbSirVtQyvrYDXhNleQmZLtKFxgK6GVVXIrPnLLZtbV6OEiMaheG+EKL4Ey8zmQhrVsFbjlKbmdrZomE1damujXzmqTEP7IlZnQkJFZyHuwB6v16Z6LyFWVUBXUlFDy2x6f17pCQw7wTgrIGDcIa6mi+9/hDacKu2jq++ABAA7dV4rqdx6N9ekCZqBM1jtev9EV8SDHgeVuKnnzW9S8pltiyT+tvx7nEcXTqc6cYxVjDXmR2/ild+cRPobQQTrfS2R+AlSwsMzLfCAU2Kx689F/Kq71s9x/9IOIUlhB9jGlDekTdAYYrZSsgFXdEr+XGP6xoKhGWLO0M6v0ZeyAirdOkMMuUMbDF24GTc2/fjRc5ZGrEvyMthep+iVF9y9KaySNI/oWxfQhMzkeTGhsfZDNs6bhM1gxbqOuPP6ub+fkHRffFujVRbg084AyY/gt4=
   on:
     branch: master
     repo: MatthewMi11er/testrepo
