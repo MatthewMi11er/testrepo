@@ -17,7 +17,7 @@ before_deploy:
 - git branch
 - standard-version -s
 - git branch
-- bash test.sh
+#- bash test.sh
 deploy:
   provider: releases
   skip_cleanup: true
