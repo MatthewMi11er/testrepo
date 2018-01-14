@@ -26,3 +26,6 @@ deploy:
   on:
     branch: master
     repo: MatthewMi11er/testrepo
+branches:
+  except:
+    - /^*-v[0-9]/
